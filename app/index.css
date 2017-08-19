@@ -22,3 +22,17 @@ h1,h2,h3 {
   display: flex;
   justify-content: center;
 }
+
+.nav {
+  background: rgba(235, 255, 135, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.active {
+  font-weight: bold;
+}

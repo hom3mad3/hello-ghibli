@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Merriweather:400,700');
+
 body {
-  background: rgba(235, 255, 136, 0.5);
+  background: #eff5f5;
+  color: #1a1b41;
+  font-family: 'Inconsolata', Courier, monospace;
+}
+
+a{
+  color: #6290c3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h1,h2,h3 {
+  font-family: 'Merriweather', Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
 }

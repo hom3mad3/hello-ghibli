@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const axios = require('axios');
+import * as api from '../api/films';
 
 class ListFilms extends React.Component {
   constructor(props) {
@@ -12,12 +13,9 @@ class ListFilms extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("https://ghibliapi.herokuapp.com/films")
-    .then((result) => {
-      this.setState({
-        films: result.data,
-      })
-    })
+    api.getFilms().then(films => {
+      this.setState({films: films})
+    });
   }
 
   _handleClick(props) {

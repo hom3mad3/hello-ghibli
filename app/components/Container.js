@@ -1,4 +1,5 @@
 const React = require('react');
+const api = require('../api/api')
 
 const RenderList = (props) => {
   let lists = ['films', 'people', 'vehicles', 'species', 'locations'];
@@ -22,7 +23,8 @@ class Container extends React.Component {
   constructor (props) {
     super();
     this.state = {
-      selectedList: 'films'
+      selectedList: 'films',
+      content: null
     };
 
     this._selectList = this._selectList.bind(this);
@@ -31,9 +33,19 @@ class Container extends React.Component {
   _selectList(list) {
     this.setState(() => {
       return {
-        selectedList: list
+        selectedList: list,
+        content: null
       }
     });
+
+    api.fetchLists(list)
+      .then(function (content){
+        console.log(content)
+    });
+  }
+
+  componentDidMount()
+    this._selectList(this.state.selectedList);
   }
 
   render () {

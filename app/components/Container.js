@@ -1,5 +1,11 @@
 const React = require('react');
-const api = require('../api/api')
+const api = require('../api/api');
+
+import { Films } from './Films';
+import { People } from './People';
+import { Vehicles } from './Vehicles';
+import { Species } from './Species';
+import { Locations } from './Locations';
 
 const RenderList = (props) => {
   let lists = ['films', 'people', 'vehicles', 'species', 'locations'];
@@ -19,21 +25,7 @@ const RenderList = (props) => {
   )
 }
 
-const Films = (props) => {
-  return (
-    <ul>
-      {props.content.map((item) => {
-        return (
-          <li key={item.name}>
-            <h3>{item.release_date} {item.title}</h3>
-            <p>Directed by: {item.director}</p>
-            <p>{item.description}</p>
-          </li>
-        )
-      })}
-    </ul>
-  )
-}
+
 
 const ListCollection = (props) => {
   if (props.selectedList === 'films')
@@ -61,8 +53,10 @@ const ListCollection = (props) => {
       </div>
     )
   else
-  return (
-    <div>tada</div>
+    return (
+      <div>
+        <Locations content={props.content}/>
+      </div>
     )
 }
 

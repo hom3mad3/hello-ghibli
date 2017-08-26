@@ -2,7 +2,7 @@ const React = require('react');
 
 export const Species = (props) => {
   return (
-    <ul>
+    <ul key={props.selectedList}>
       {props.content.map((item) => {
         return (
           <li key={item.id}>

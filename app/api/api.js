@@ -4,7 +4,7 @@ const baseUrl = 'https://ghibliapi.herokuapp.com/'
 
 export const fetchLists = (list) => {
   let url = (baseUrl + list)
-  return axios.get(url)j
+  return axios.get(url)
       .then((response) => {
         return response.data;
       });

@@ -5,6 +5,7 @@ const NavLink = require('react-router-dom').NavLink;
 const Nav = () => {
   return (
     <ul className="nav">
+      <h1>Hello Ghibli</h1>
       <li>
         <NavLink exact activeClassName='active' to='/'>
           All Films

@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Merriweather:400,700');
 
+* {
+  margin: 0; padding: 0; border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 body {
   background: #eff5f5;
   color: #1a1b41;
   font-family: 'Inconsolata', Courier, monospace;
+}
+
+ol, ul {
+  list-style: none;
 }
 
 a{
@@ -12,27 +23,60 @@ a{
   text-decoration: none;
 }
 
+p {
+  padding-bottom: 10px;
+}
+h1 {
+  color: rgba(255,104,115,1);
+  font-size: 24pt;
+  text-align: center;
+  padding-top: 20px;
+}
+h2,h3 {
+  color: #0b3b6e;
+}
 h1,h2,h3 {
   font-family: 'Merriweather', Helvetica, sans-serif;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.nav {
+  border-bottom: 1px dotted #dce7eb;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  text-transform: capitalize;
+}
+
+.nav li {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.active {
+  color: #6290c3;
   font-weight: bold;
 }
 
 .container {
-  max-width: 1200px;
-  display: flex;
+  display: grid;
   justify-content: center;
+  margin: 0 25px;
 }
 
-.nav {
-  background: rgba(235, 255, 135, 0.5);
-  display: flex;
-  justify-content: center;
+.item {
+  border-radius: 15px;
+  background-color: #fff;
+  display: block;
+  margin: 10px;
+  max-width: 850px;
+  padding: 20px;
 }
 
-.nav li {
-  margin: 0 15px;
-}
-
-.active {
-  font-weight: bold;
+@media (min-width: 800px) {
+  .container {
+    grid-template-rows: repeat(4, 100%);
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

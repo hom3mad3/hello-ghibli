@@ -3,11 +3,11 @@ const React = require('react');
 export const RenderList = (props) => {
   let lists = ['films', 'people', 'vehicles', 'species', 'locations'];
   return (
-    <ul>
+    <ul className="nav">
       {lists.map((list) => {
         return (
           <li
-            style={list === props.selectedList ? { color: '#6290c3' } : null}
+            className={list === props.selectedList ? "active" : null}
             onClick={props.onSelect.bind(null, list)}
             key={list}>
             {list}

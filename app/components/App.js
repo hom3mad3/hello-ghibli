@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <Nav />
+          <h1>Hello Ghibli</h1>
           <Switch>
             <Route exact path='/' component={Container} />
             <Route render={() => {

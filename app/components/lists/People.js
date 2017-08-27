@@ -4,10 +4,10 @@ import { Link } from 'react-router';
 
 export const People = (props) => {
   return (
-    <ul key={props.selectedList}>
+    <ul key={props.selectedList} className="container">
       {props.content.map((item) => {
         return (
-          <li key={item.id}>
+          <li key={item.id} className="item">
             <h3>{item.name} </h3>
             <p>Gender: {item.gender}</p>
             <p>Age: {item.age}</p>

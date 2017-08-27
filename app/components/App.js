@@ -5,7 +5,7 @@ const Router = ReactRouter.BrowserRouter;
 const Route = ReactRouter.Route;
 const Switch = ReactRouter.Switch;
 
-const ListFilms = require('./ListFilms');
+const Container = require('./Container');
 const Nav = require('./Nav');
 
 class App extends React.Component {
@@ -15,7 +15,7 @@ class App extends React.Component {
         <div>
           <Nav />
           <Switch>
-            <Route exact path='/' component={ListFilms} />
+            <Route exact path='/' component={Container} />
             <Route render={() => {
               return <h2>:(</h2>
             }} />
